@@ -1,0 +1,26 @@
+# Ignore bin and obj folders
+**/bin/
+**/obj/
+
+# Ignore Visual Studio Code settings
+.vscode/
+
+# Ignore user-specific files
+*.user
+*.userprefs
+*.suo
+*.userosscache
+
+# Ignore NuGet Packages
+packages/
+*.nupkg
+
+# Ignore source control files
+*.vspscc
+*.vssscc
+
+# Ignore build outputs
+build/
+
+# Ignore log files
+*.log
