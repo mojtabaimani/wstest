@@ -1,40 +1,73 @@
-# Web Socket Client and Server Sample Project
 
-This repository contains a sample project demonstrating the implementation of a web socket client and server.
+# WebSocket Examples in C#
+
+This repository contains two sets of examples demonstrating how to implement WebSocket communication in C#. The examples are divided into a simple server/client implementation and an advanced server/client implementation.
 
 ## Getting Started
 
-To get started with this project, follow the steps below:
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-1. Clone the repository:
+### Prerequisites
 
-    ```bash
-    git clone https://github.com/mojtabaimani/wstest.git
-    ```
+- .NET 5.0 SDK or later
 
-2. Install the required dependencies:
+### Installing Dependencies
 
-    ```bash
-    dotnet restore
-    ```
+Before running any of the projects, you must restore the dependencies. Navigate to the project's directory and use the following command:
 
-3. Start the server in a terminal:
+```bash
+git clone https://github.com/mojtabaimani/wstest.git
+cd wstest
+dotnet restore
+```
 
-    ```bash
-    dotnet run --project server
-    ```
+## Simple Server/Client
 
-4. Start the client in another terminal:
+The simple server and client examples demonstrate the basic setup for WebSocket communication in C#.
 
-    ```bash
-    dotnet run --project client
-    ```
+### Simple Server
 
-## Features
+Located in `./server/`, this project shows how to create a basic WebSocket server that listens for connections and sends a "Hello World" message to the client.
 
-- Web socket client and server implementation
-- Real-time communication between client and server
-- Sample code for handling different events and messages
+Run the server using:
+
+```bash
+dotnet run --project server
+```
+
+### Simple Client
+
+Located in `./client/`, this client connects to the WebSocket server and prints any message it receives to the console.
+
+Run the client using:
+
+```bash
+dotnet run --project client
+```
+
+## Advanced Client/Server
+
+The advanced examples demonstrate a more complex scenario where the server sends detailed information to the client upon connection, echoes received messages with additional text, and periodically sends updates to all connected clients.
+
+### Advanced Server
+
+Located in `./advanced/server/`, this server accepts multiple client connections, sends each client a message containing their connection info, echoes received messages with "your message received", and sends date and time updates every 5 seconds.
+
+Run the server using:
+
+```bash
+dotnet run --project advanced/server
+```
+
+### Advanced Client
+
+Located in `./advanced/client/`, this client allows users to send messages to the server through the console and receive messages from the server, including echoed messages and periodic updates.
+
+Run the client using:
+
+```bash
+dotnet run --project advanced/client
+```
 
 ## Contributing
 
